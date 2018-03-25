@@ -3,7 +3,7 @@
 
 #### Adresses de téléchargement d'OpenRefine et de plugin
 * http://openrefine.org/download.html
-* https://github.com/fadmaa/grefine-rdf-extension/releases
+* https://github.com/fadmaa/grefine-rdf-extension/releases 
 * http://refine.codefork.com/reconcile/viaf
 * https://www.bits.vib.be/index.php/software-overview/openrefine
 * https://github.com/RubenVerborgh/Refine-NER-Extension
