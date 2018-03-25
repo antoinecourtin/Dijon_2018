@@ -13,14 +13,8 @@
 * Adresse pour paramétrer l'outil de réalignement avec wikidata dans OpenRefine
 https://tools.wmflabs.org/openrefine-wikidata/fr/api
 
-#### Pour les exercices
-* L'URL de base pour créer une URL d'une personne dans AGORHA : http://www.purl.org/inha/agorha/002/
-* exemple proche de requête wikidata utile pour le 2nd exo : http://tinyurl.com/ycm5tr8g
-
-
 #### Quelques exemples de "formule" utiles dans OpenRefine
-* rajouter une valeur fixe à une table : "valeur que tu veux ajouter" + cells['nom_delacolone'].value
-
+* rajouter une valeur fixe à une table : `valeur que tu veux ajouter" + cells['nom_delacolone'].value`
 * exemple pour faire un rechercher/remplacer : `value.replace("[MotRecherché]","[MotLeRemplaçant]")`
 * effectuer plusieurs modifications en un seul passage : `value.replace("~", "").replace(",","")`
 * `value.replace("\"", "")`. Le caractère \ est un caractère d'échappement, il permet d'indiquer à OpenRefine qu'il doit utiliser le guillemet comme caractère à remplacer et non pas comme élément de la fonction value.replace.
@@ -45,10 +39,18 @@ https://tools.wmflabs.org/openrefine-wikidata/fr/api
 => cell.cross("nomduprojet", "nomColonneeCléIntermédiaire")[0].cells["nomColonneArécupérer"].value
 * pour exporter en geojson : https://gist.github.com/psychemedia/53e30d3d151fea23af68
 
-##### Lien vers quelques ressources complémentaire
+
+##### Liens vers ressources indispensables en français pour OpenRefine appliqués aux GLAMs
+* Les supports de cours de Mathieu Saby sur Slideshare
+https://fr.slideshare.net/27point7/nettoyer-et-prparer-des-donnes-avec-openrefine
+* Le support de Maïwenn Bourdic, régulièrement mis à jour
+https://patrimoine-et-numerique.fr/tutoriels/52-36-openrefine-excel-aux-hormones-pour-nettoyage-de-donnees
+* Tuto sur bibliopedia
+https://www.bibliopedia.fr/wiki/OpenRefine_:_exemples
+
+
+##### Liens vers quelques tuto complémentaire intégrant OpenRefine
 * TUTO : “Reconcilier” une liste de nom d’architectes avec Wikidata en utilisant OpenRefine : https://medium.com/@seeksanusername/reconcilier-une-liste-darchitecte-avec-wikidata-en-utilisant-openrefine-16819fbb2903
-* TUTO : Tableau périodique (ou pas) des outils/ressources pour les humanités numériques :
-https://medium.com/@seeksanusername/tableau-p%C3%A9riodique-des-outils-ressources-pour-les-humanit%C3%A9s-num%C3%A9riques-43da3f5ff9ff
 * TUTO : Exploiter/visualiser/explorer un corpus issue de l’OAI-PMH grâce au duo OpenRefine/Palladio
 https://medium.com/@seeksanusername/exploiter-visualiser-explorer-un-corpus-issue-de-loai-pmh-gr%C3%A2ce-au-couple-openrefine-palladio-1241323cf626
 * Exploiter des cartes anciennes numérisées - Trucs et astuces (avec du Mapwarper, Palladio, umaps)
