@@ -26,9 +26,6 @@
   * http://publicartmuseum.net/
   * http://www.projectcornelia.be/
   * https://dhlab.epfl.ch/page-128334-en.html
-  * https://heuresitaliennes-hautsdefrance.inha.fr/
-  * http://portail3d-conques.inha.fr
-  * https://ventesdantiques.inha.fr/
   * http://archipedie.citedelarchitecture.fr/
 
 
@@ -44,7 +41,6 @@
   * https://francearchives.fr/
   * http://gallica.bnf.fr/accueil/?mode=desktop
   * http://www.collections.musee-bretagne.fr/
-  * http://bibliotheque-numerique.inha.fr/
   * https://www.rijksmuseum.nl/en/search
   * https://www.flickr.com/photos/library_of_congress/
   * https://collection.cooperhewitt.org
@@ -92,3 +88,13 @@
   * https://omeka.org/s/
   * https://recogito.pelagios.org/
   * http://openrefine.org/download.html
+
+* INHA
+  * https://heuresitaliennes-hautsdefrance.inha.fr/
+  * https://portail3d-conques.inha.fr
+  * https://ventesdantiques.inha.fr/
+  * https://agorha.inha.fr
+  * https://www.inha.fr/fr/recherche/programmation-scientifique/en-2017-2018/les-lundis-numeriques-2017-2018.html
+  * https://digitalmontagny.inha.fr/fr
+  * http://bibliotheque-numerique.inha.fr/
+  * http://journals.openedition.org/inha/
