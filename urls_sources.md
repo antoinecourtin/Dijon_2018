@@ -88,6 +88,7 @@
   * https://omeka.org/s/
   * https://recogito.pelagios.org/
   * http://openrefine.org/download.html
+  * https://mapwarper.net/
 
 * INHA
   * https://heuresitaliennes-hautsdefrance.inha.fr/
