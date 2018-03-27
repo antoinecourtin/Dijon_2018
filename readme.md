@@ -12,3 +12,6 @@ Rassemble à la fois des fichiers markdown avec des trucs & astuces par thémati
   * contient les trucs & astuces  pour OpenRefine
 * dans le dossier [data](/data)
   * `data-RETIF_HdF_2017_all_Palladio.json`: fichiers des oeuvres du RETIF en Haut-de-France au format Palladio
+
+
+[![DOI](https://zenodo.org/badge/126485766.svg)](https://zenodo.org/badge/latestdoi/126485766)
