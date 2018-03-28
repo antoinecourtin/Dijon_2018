@@ -1,7 +1,9 @@
 ## Ce que font les *data* à la pratique de l'histoire de l'art :  intervention du 29 mars 2018 à l'Université de Dijon.
 
-Rassemble à la fois des fichiers markdown avec des trucs & astuces par thématique/outils mais également des fichiers de données pour des tests sous différents formats.
+Rassemble à la fois des fichiers markdown avec des trucs & astuces par thématique/outils mais également des fichiers de données pour des tests sous différents formats ainsi que le support de présentation.
 
+* [prez_dijon_20180329.mdf](/prez_dijon_20180329.pdf)
+  * support de cours au format PDF
 * [urls_sources.md](/urls_sources.md)
   * liste l'ensemble des URLS, des projets, outils, ressources évoquées pendant le cours.
 * [helpful_tips_wikidata.md](/helpful_tips_wikidata.md)
