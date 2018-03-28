@@ -89,6 +89,8 @@
   * https://recogito.pelagios.org/
   * http://openrefine.org/download.html
   * https://mapwarper.net/
+  * https://umap.openstreetmap.fr/fr/
+  * http://altag3d.huma-num.fr/ 
 
 * INHA
   * https://heuresitaliennes-hautsdefrance.inha.fr/

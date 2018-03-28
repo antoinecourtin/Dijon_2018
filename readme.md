@@ -12,3 +12,4 @@ Rassemble à la fois des fichiers markdown avec des trucs & astuces par thémati
   * contient les trucs & astuces  pour OpenRefine
 * dans le dossier [data](/data)
   * `data-RETIF_HdF_2017_all_Palladio.json`: fichiers des oeuvres du RETIF en Haut-de-France au format Palladio
+  * `Archi_US_dataset_2018.csv` : fichier de tests avec des architectes américains, diplômés de l'écoles des beaux-arts de Paris
