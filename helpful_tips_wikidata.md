@@ -2,11 +2,15 @@
 
 ## Wikidata
 
-### A garder
+### A garder sous le coude
 * Adresse d'un élément wikidata (Q??) : https://www.wikidata.org/wiki/Q354396
 * Adresse d'une propriété wikidata (P??) :https://www.wikidata.org/wiki/Property:P571
 * Adresse pour réaliser des requêtes SPARQL : https://query.wikidata.org/
 * SPARQLEndpoint pour wikidata https://query.wikidata.org/bigdata/namespace/wdq/sparql
+* pour récupérer les labels plutôts que les id :  
+  * appeler dans le SELECT, votre variable + Label : exemple pour la variable inconnu ````?titre````, il faut écrire ````?titreLabel````
+  * ajouter à votre requête dans les { } du WHERE ````SERVICE wikibase:label { bd:serviceParam wikibase:language "en" . ````
+
 
 ### Quelques exemples de requêtes SPARQL
 
@@ -49,7 +53,7 @@ SELECT DISTINCT ?item ?itemLabel (YEAR(?date) AS ?year) ?dimensions ?locationLab
 	}
 ````
 
-#### Afficher sous la forme d'une timeline, les propriétaires des céramiques grecques du MET 
+#### Afficher sous la forme d'une timeline, les propriétaires des céramiques grecques du MET
 
 ````sparql
 	#defaultView:Timeline
@@ -60,10 +64,10 @@ SELECT DISTINCT ?item ?itemLabel (YEAR(?date) AS ?year) ?dimensions ?locationLab
 	    ?item wdt:P276 wd:Q160236.
 	    ?item p:P127 ?declaration_proprietaires.
 	    ?declaration_proprietaires ps:P127 ?proprietaires.
-	    OPTIONAL 
+	    OPTIONAL
 		{?declaration_proprietaires pq:P580 ?datedebut.
 		FILTER(!(STRSTARTS(?datedebut, 't')))}
-	    OPTIONAL 
+	    OPTIONAL
 		{?declaration_proprietaires pq:P582 ?datefin.
 		FILTER(!(STRSTARTS(?datefin, 't')))}
 
@@ -75,16 +79,16 @@ SELECT DISTINCT ?item ?itemLabel (YEAR(?date) AS ?year) ?dimensions ?locationLab
 
 ````sparql
 #defaultView:Map
-SELECT DISTINCT ?item  ?Titre ?createur (year(?date) as ?AnneeCreation) ?image ?coord 
+SELECT DISTINCT ?item  ?Titre ?createur (year(?date) as ?AnneeCreation) ?image ?coord
 WHERE {
    ?item wdt:P31/wdt:P279* wd:Q860861.                    # sculpture
    ?item wdt:P136 wd:Q557141 .                            # genre : art public
    {?item wdt:P131 wd:Q90.}                               # ... située dans Paris
    UNION
    {?item wdt:P131 ?arr.                                  # ... ou dans un arrondissement de Paris  
-   ?arr wdt:P131 wd:Q90. } 
+   ?arr wdt:P131 wd:Q90. }
    ?item rdfs:label ?Titre filter (lang(?Titre) = "fr").  # Titre
-  
+
    OPTIONAL {?item wdt:P170 ?Qcreateur.                   # créateur/créatrice (option)
    ?Qcreateur rdfs:label ?createur filter (lang(?createur) = "fr") .}
    OPTIONAL {?item wdt:P571 ?date.}                       # date de création (option)
@@ -138,7 +142,7 @@ SELECT   ?year  (COUNT(?_genre) AS ?count ) (SAMPLE(?_genreLabel) AS ?label )  (
   ?_genre rdfs:label ?_genreLabel.
   BIND(str(YEAR(?_publication_date)) AS ?year)
   FILTER((LANG(?_genreLabel)) = "en")
- 
+
  FILTER (?_publication_date >= "2000-00-00T00:00:00Z"^^xsd:dateTime)
 }
 GROUP BY ?_genreLabel ?year
@@ -146,9 +150,9 @@ HAVING (?count > 30)
 ````
 
 
-#### Évolution du nombre d'œuvres par "Genre" entre 1500-1600. 
+#### Évolution du nombre d'œuvres par "Genre" entre 1500-1600.
 ````sparql
-#defaultView:BarChart 
+#defaultView:BarChart
 SELECT   ?year  (COUNT(?_genre) AS ?count ) (SAMPLE(?_genreLabel) AS ?label )  (?year as ?year_shown) WHERE {
   ?item wdt:P31 wd:Q3305213.
   ?item wdt:P170 ?creator.
@@ -157,7 +161,7 @@ SELECT   ?year  (COUNT(?_genre) AS ?count ) (SAMPLE(?_genreLabel) AS ?label )  (
   ?_genre rdfs:label ?_genreLabel.
   BIND(str(YEAR(?_creation_date)) AS ?year)
   FILTER((LANG(?_genreLabel)) = "fr")
-  
+
  FILTER (?_creation_date >= "1500-00-00T00:00:00Z"^^xsd:dateTime)
  FILTER (?_creation_date <= "1600-00-00T00:00:00Z"^^xsd:dateTime)
 }
@@ -165,7 +169,7 @@ GROUP BY ?_genreLabel ?year
 HAVING (?count > 1)
 ````
 
-#### Récupérer la géoloc des villes de naissance et de décès des peintres actifs au XVIe 
+#### Récupérer la géoloc des villes de naissance et de décès des peintres actifs au XVIe
 ````
 http://tinyurl.com/ybrcyhb8
 ````
@@ -208,4 +212,3 @@ SELECT ?item ?itemLabel ?coord WHERE {
   FILTER(REGEX(?itemLabel, "(ette)$"))
 }
 ````
-
